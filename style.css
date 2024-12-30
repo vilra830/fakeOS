@@ -16,11 +16,28 @@ body {
 #start-menu {
   border: 1px solid pink;
   height: 50vh;
-  width: 20vw;
+  width: 30vw;
   position: absolute;
   bottom: 0;
   background-color: darkgrey;
   display: none;
+  display: flex;
+}
+
+#log-off {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  background-color: #1f59d5;
+  justify-content: space-evenly;
+}
+
+.log-off__icons {
+  object-fit: scale-down;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
 }
 
 #footer {
