@@ -1,0 +1,12 @@
+@use "../partials/colors";
+
+footer {
+  height: 5vh;
+  background-color: colors.$windows-blue;
+  display: flex;
+  justify-content: space-between;
+}
+
+#timestamp {
+  border: 1px solid pink;
+}

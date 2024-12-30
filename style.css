@@ -1,3 +1,26 @@
+body {
+  text-align: center;
+  border: 1px solid black;
+  height: 75vh;
+  width: 100vw;
+}
 
+#main {
+  height: 70vh;
+  background-image: url("./images/wallpaper.png");
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  height: 5vh;
+  background-color: #1f59d5;
+  display: flex;
+  justify-content: space-between;
+}
+
+#timestamp {
+  border: 1px solid pink;
+}
 
 /*# sourceMappingURL=style.css.map */
