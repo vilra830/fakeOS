@@ -8,5 +8,16 @@ body {
   height: 70vh;
   background-image: url("./images/wallpaper.png");
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+  position: relative;
+}
+
+#start-menu {
+  border: 1px solid pink;
+  height: 50vh;
+  width: 20vw;
+  position: absolute;
+  bottom: 0;
+  background-color: darkgrey;
+  display: none;
 }
