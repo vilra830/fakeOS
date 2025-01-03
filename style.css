@@ -3,6 +3,7 @@ body {
   border: 1px solid black;
   height: 75vh;
   width: 100vw;
+  position: fixed;
 }
 
 #main {
@@ -58,6 +59,12 @@ body {
   padding: 5px;
 }
 
+#desktop-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .desktop-menu {
   display: flex;
   flex-direction: column;
@@ -80,6 +87,36 @@ body {
 
 #timestamp {
   border: 1px solid pink;
+}
+
+#menu-modal {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  right: 10%;
+  border: solid 1px #1f59d5;
+  justify-content: center;
+  background-color: white;
+}
+
+#modal-div {
+  background-color: #1f59d5;
+}
+
+.modal-img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-header {
+  display: flex;
+  background-color: #1f59d5;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=style.css.map */
