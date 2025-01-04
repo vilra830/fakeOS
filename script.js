@@ -1,6 +1,7 @@
 import { createElement , createImage } from "./dom.js";
 import data from "./menu.json" with {type: "json"};
-import { getMusic } from "./fetchMusic.js";
+import { getMusic , renderMusicTracks } from "./fetch.js";
+// import { fetchWebApi, getTopTracks } from "./fetch.js";
 
 
 const timestamp = document.querySelector("#timestamp");
@@ -13,9 +14,9 @@ const nothing = document.querySelector("#button");
 const close = document.querySelector(".close");
 const modalTitle = document.querySelector(".modal-title");
 const modalHeader = document.querySelector(".modal-header");
+const modalImg = document.querySelector("#modal-img");
 const modalBody = document.querySelector(".modal-body");
-const modalImg = document.querySelector("modal-img");
-
+let desktopPar;
 //display time
 const timeStamp = () => {
   let time = new Date();
@@ -37,53 +38,53 @@ const timeStamp = () => {
 };
 timeStamp();
 
-for ( let i = 0 ; i < data.icons.length ;i++) {
+
+const reset = () => {
+menuModal.reset();
+};
+
+const startApp = () => {
+
+ for ( let i = 0 ; i < data.icons.length ;i++) {
   const desktopDiv = document.createElement("div");
   desktopDiv.classList.add("desktop-menu");
   desktopMenu.appendChild(desktopDiv);  
-  const desktopImg = document.createElement("img");  
-  desktopImg.src = data.icons[i].img;
-  const desktopPar = document.createElement("p");
-  desktopPar.innerText = data.icons[i].name;
-  desktopDiv.appendChild(desktopImg);
-  desktopDiv.appendChild(desktopPar);
+   const desktopImg = data.icons[i].img;
+  desktopPar =data.icons[i].name;
+  console.log(desktopPar);
+  createImage(desktopImg, desktopDiv);
+  createElement("p" , desktopPar, desktopDiv);
 
-  // desktopDiv.addEventListener("click", (ev) => {
-  //   ev.preventDefault();
-  //   console.log("This DIV is clickable");
-  //   menuModal.style.display = "block";
-  //   menuModal.innerHTML  = `<div id="modal-div"> ${desktopDiv.innerText} </div>`;
 
-  // });
+  desktopDiv.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    menuModal.style.display = "block";
+    createImage(desktopImg, modalHeader);  
+    
+    createElement("p" , desktopPar, modalHeader);
+    if (modalBody.innerHTML === "") { 
+      
+      renderMusicTracks();
+    } 
+
+
+  });
+  
+ 
+  reset();
+
   
   const startMenuDiv = document.createElement("div");
   startMenuDiv.classList.add("start-menu");
   startMenu.appendChild(startMenuDiv);  
-  const startMenuImg = document.createElement("img");
-  startMenuImg.classList.add("start-menu__icons")
-  startMenuImg.src = data.icons[i].img;
-  const startMenuPar = document.createElement("p");
-  startMenuPar.innerText = data.icons[i].name;
-  startMenuDiv.appendChild(startMenuImg);
-  startMenuDiv.appendChild(startMenuPar);
+
+  const startMenuImg = data.icons[i].img;
+  const startMenuPar = data.icons[i].name;
+  createImage(startMenuImg,startMenuDiv,"start-menu__icons");
+  createElement("p",startMenuPar,startMenuDiv );
   
 
-  // menuModal.style.display = "none";
-  // startMenuDiv.addEventListener("click", (ev) => {
-
-  //   ev.preventDefault();
-  //   console.log("This DIV is clickable");
-  //   // menuModal.style.display = "none";
-  //   if(menuModal.style.display === "none") {
-
-  //     menuModal.style.display = "block";
-  //   } else {
-
-  //     menuModal.style.display = "none";
-  //   }
-
-    
-  // });
+}
 
 }
 
@@ -113,41 +114,28 @@ console.log(data.length);
 // mainMenu.appendChild(div);  
 
 
-    
- const music = await getMusic();
- nothing.addEventListener("click" , (ev) => {
-  menuModal.style.display = "block";
-  
-   
-  // const divModal = document.createElement("div");
-  // menuModal.appendChild(divModal);
-  for(let i = 0 ; i < 10 ; i++){
-  const thumb = music.track_details[i].thumb;
-  const artistName = music.track_details[i].artist;
-  const songName = music.track_details[i].song_name;
-  console.log(thumb);
 
-  const musicImg = document.createElement("img");
-  musicImg.src = thumb;
-  const divBox = document.createElement("div");
-  divBox.classList.add("music-item");
-  modalBody.appendChild(divBox);
-  // divModal.appendChild(musicImg);
-    createImage(musicImg.src, divBox, "modal-img");  
-    createElement("p" , artistName, divBox, "modal-p");
-    createElement("p" , songName, divBox, "modal-p");
-  }
-
-  });
 
 
   //close my modal
   close.addEventListener("click" , (ev) => {
-    ev.preventDefault;
+    ev.preventDefault();
     menuModal.style.display = "none";
+    reset();
+
+
 
   });
 
 
 
 
+// console.log(renderMusicTracks());
+
+nothing.addEventListener("click" , (ev) => {
+  ev.preventDefault();
+  renderMusicTracks();
+
+});
+
+startApp();

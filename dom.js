@@ -1,5 +1,10 @@
 //create an element
-export const createElement = (elementType, value, parent, classList = "") => {
+export const createElement = (
+  elementType,
+  value = "",
+  parent,
+  classList = ""
+) => {
   const element = document.createElement(elementType);
   element.innerText = value;
   element.classList = classList;

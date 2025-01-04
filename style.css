@@ -73,8 +73,8 @@ body {
   width: 20vw;
 }
 .desktop-menu img {
-  width: 35px;
-  height: 35px;
+  width: 20px;
+  height: 20px;
   background-color: rgba(0, 0, 0, 0);
 }
 
@@ -92,8 +92,10 @@ body {
 #menu-modal {
   display: none;
   position: absolute;
+  width: 80vw;
+  height: 60vh;
   top: 25%;
-  left: 25%;
+  left: 10%;
   right: 10%;
   border: solid 1px #1f59d5;
   justify-content: center;
@@ -105,18 +107,28 @@ body {
 }
 
 .modal-img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .modal-header {
   display: flex;
   background-color: #1f59d5;
+  height: 5vh;
 }
 
 .modal-body {
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-item {
+  width: 80px;
+  height: 80px;
+  gap: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
