@@ -3,7 +3,7 @@ import { createElement, createImage } from "./dom.js";
 export const getMusic = async () => {
   //by default fetch makes a GET request
   const token =
-    "BQB-e1P2t49v1aTdxGXAFNAhevlwz8Zear8qurp3zLqzvgjji0RelnXfcPpauNxSv2zLHFhq2ggE04DPiMqgtDt50SECq_ZTQ9FG8gibnFIEtdrRH38";
+    "BQBsX8h7xBTJGPiCmx_YMnWNnrWLgDrWwIZcDPDl5NzaT-6zjVA6oSHoE2RXoS4twPmyAwzcN8BK8qOzHuQ18HlTPHXBgvQJeyzuWlc_hc8VuM-r4QM";
   const url =
     "https://api.spotify.com/v1/artists/4LEiUm1SRbFMgfqnQTwUbQ/top-tracks";
   const options = {

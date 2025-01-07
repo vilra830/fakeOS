@@ -23,6 +23,7 @@ const timeStamp = () => {
   let hour = time.getHours();
   let minute = time.getMinutes();
   let date = time.getDate();
+  let seconds = time.getSeconds();
 
   let am = "AM";
 
@@ -32,11 +33,15 @@ const timeStamp = () => {
   if (minute < 10) {
     minute = "0" + minute;
   }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
 
-  timestamp.innerHTML = `${hour}:${minute} ${am}`;
+  timestamp.innerHTML = `${hour}:${minute}:${seconds} ${am}`;
   //   timestamp.innerHTML = `${date}`;
 };
 timeStamp();
+setInterval(timeStamp,1000);
 
 
 const reset = () => {
@@ -44,7 +49,6 @@ menuModal.reset();
 };
 
 const startApp = () => {
-
  for ( let i = 0 ; i < data.icons.length ;i++) {
   const desktopDiv = document.createElement("div");
   desktopDiv.classList.add("desktop-menu");
@@ -55,10 +59,11 @@ const startApp = () => {
   createImage(desktopImg, desktopDiv);
   createElement("p" , desktopPar, desktopDiv);
 
-
   desktopDiv.addEventListener("click", (ev) => {
     ev.preventDefault();
+    console.log(desktopDiv);
     menuModal.style.display = "block";
+  
     createImage(desktopImg, modalHeader);  
     createElement("p" , desktopPar, modalHeader);
     if (modalBody.innerHTML === "") { 
