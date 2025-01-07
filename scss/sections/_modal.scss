@@ -5,7 +5,7 @@
   display: none;
   position: absolute;
   width: 80vw;
-  height: 60vh;
+  height: 50vh;
   top: 25%;
   left: 10%;
   right: 10%;
@@ -21,6 +21,7 @@
 .modal-img {
   width: 40px;
   height: 40px;
+  text-align: center;
 }
 
 .modal-header {
@@ -37,7 +38,14 @@
   justify-content: center;
 }
 .music-item {
-  width: 80px;
-  height: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 120px;
   gap: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
 }
