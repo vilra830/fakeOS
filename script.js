@@ -60,7 +60,6 @@ const startApp = () => {
     ev.preventDefault();
     menuModal.style.display = "block";
     createImage(desktopImg, modalHeader);  
-    
     createElement("p" , desktopPar, modalHeader);
     if (modalBody.innerHTML === "") { 
       
@@ -121,6 +120,7 @@ console.log(data.length);
   close.addEventListener("click" , (ev) => {
     ev.preventDefault();
     menuModal.style.display = "none";
+
     reset();
 
 
@@ -132,10 +132,10 @@ console.log(data.length);
 
 // console.log(renderMusicTracks());
 
-nothing.addEventListener("click" , (ev) => {
-  ev.preventDefault();
-  renderMusicTracks();
+// nothing.addEventListener("click" , (ev) => {
+//   ev.preventDefault();
+//   renderMusicTracks();
 
-});
+// });
 
 startApp();
