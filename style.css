@@ -1,0 +1,157 @@
+body {
+  text-align: center;
+  border: 1px solid black;
+  height: 75vh;
+  width: 100vw;
+  position: fixed;
+}
+
+#main {
+  height: 70vh;
+  background-image: url("./images/wallpaper.png");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+}
+
+#start-menu {
+  border: 1px solid pink;
+  height: 50vh;
+  width: 30vw;
+  position: absolute;
+  bottom: 0;
+  background-color: darkgrey;
+  display: none;
+  display: flex;
+}
+
+#log-off {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  background-color: #1f59d5;
+  justify-content: space-evenly;
+}
+
+.log-off__icons {
+  object-fit: scale-down;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+span {
+  text-align: center;
+  padding-top: 5px;
+}
+
+#start-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: space-evenly;
+}
+
+#menu-header {
+  background-color: #1f59d5;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px;
+  text-align: left;
+}
+
+.start-menu {
+  display: flex;
+}
+
+.start-menu__icons {
+  object-fit: scale-down;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+#desktop-menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.desktop-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0 0 10px;
+  width: 20vw;
+}
+.desktop-menu img {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#footer {
+  height: 5vh;
+  background-color: #1f59d5;
+  display: flex;
+  justify-content: space-between;
+}
+
+#timestamp {
+  border: 1px solid pink;
+  padding: 5px;
+  color: white;
+}
+
+#menu-modal {
+  display: none;
+  position: absolute;
+  width: 80vw;
+  height: 50vh;
+  top: 25%;
+  left: 10%;
+  right: 10%;
+  border: solid 1px #1f59d5;
+  justify-content: center;
+  background-color: white;
+}
+
+#modal-div {
+  background-color: #1f59d5;
+}
+
+.modal-img {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  background-color: #1f59d5;
+  height: 5vh;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 120px;
+  gap: 5px;
+  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

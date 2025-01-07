@@ -1,0 +1,30 @@
+{
+  "icons": [
+    {
+      "name": "My Computer",
+      "alt": "Icon representing the computer and system resources",
+      "img": "./images/4.png"
+    },
+    {
+      "name": "Recycle Bin",
+      "alt": "Icon representing the Recycle Bin for deleted files",
+      "img": "./images/6.png"
+    },
+    {
+      "name": "Internet Explorer",
+      "alt": "Icon representing the Internet Explorer browser",
+      "img": "./images/3.png"
+    },
+    {
+      "name": "My Documents",
+      "alt": "Icon representing the My Documents folder",
+      "img": "./images/5.png"
+    },
+
+    {
+      "name": "Windows Media Player",
+      "alt": "Icon for the Windows Media Player application",
+      "img": "./images/7.png"
+    }
+  ]
+}

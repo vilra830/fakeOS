@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake OS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/07d84f81f2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="main">
+      <div id="desktop-menu"></div>
+      <form id="menu-modal">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h5 class="modal-title"></h5>
+        </div>
+        <div class="modal-body"></div>
+      </form>
+      <div id="start-menu">
+        <div id="menu-header">Hi! Rhea</div>
+        <div id="log-off">
+          <img class="log-off__icons" src="./images/1.png" alt="log-off" /><span
+            >Log Off</span
+          >
+          <img
+            class="log-off__icons"
+            src="./images/2.png"
+            alt="shutdown"
+          /><span>Shutdown</span>
+        </div>
+      </div>
+      <!-- <button id="button">MODAL</button> -->
+    </main>
+
+    <footer id="footer">
+      <button id="start-button">START</button>
+      <div id="timestamp"></div>
+    </footer>
+  </body>
+</html>
